@@ -2,7 +2,7 @@ import asyncio
 import logging
 
 class WebCrawler:
-    def __init__(self, domains, fetcher, extractor, matcher, result_handler, max_depth=3, global_timeout=600):
+    def __init__(self, domains, fetcher, extractor, matcher, result_handler, max_depth=3, global_timeout=60):
         self.domains = domains
         self.fetcher = fetcher
         self.extractor = extractor
