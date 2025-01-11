@@ -29,6 +29,9 @@ class CrawlRequest(BaseModel):
     max_depth: int = 3
     global_timeout: int = 60
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello, Welcome to web-scrapper!"}
 
 @app.post("/start-crawl")
 async def start_crawl(request: CrawlRequest, background_tasks: BackgroundTasks):
